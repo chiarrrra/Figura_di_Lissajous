@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { margin: 0; padding: 10px; background: #ffffff; font-family: monospace; font-size: 11px; overflow: hidden; }
         #canvas-box { width: 100%; border-bottom: 1px solid #000; padding-bottom: 10px; }
@@ -14,9 +16,18 @@
 <body>
     <div id="canvas-box"></div>
     <div id="control-panel">
-        <div class="ctrl-item"><label>Freq X (a) [<span id="fx-l">1</span>]</label><input type="range" id="fx-s" min="1" max="10" step="1" value="1"></div>
-        <div class="ctrl-item"><label>Freq Y (b) [<span id="fy-l">1</span>]</label><input type="range" id="fy-s" min="1" max="10" step="1" value="1"></div>
-        <div class="ctrl-item"><label>Fase (&delta;) [<span id="p-l">0</span>&deg;]</label><input type="range" id="p-s" min="0" max="360" step="1" value="0"></div>
+        <div class="ctrl-item">
+            <label>Freq CH1 - Asse X [<span id="fx-l">1</span>]</label>
+            <input type="range" id="fx-s" min="1" max="10" step="1" value="1">
+        </div>
+        <div class="ctrl-item">
+            <label>Freq CH2 - Asse Y [<span id="fy-l">1</span>]</label>
+            <input type="range" id="fy-s" min="1" max="10" step="1" value="1">
+        </div>
+        <div class="ctrl-item">
+            <label>Fase (&delta;) [<span id="p-l">0</span>&deg;]</label>
+            <input type="range" id="p-s" min="0" max="360" step="1" value="0">
+        </div>
     </div>
     <script src="sketch.js"></script>
 </body>

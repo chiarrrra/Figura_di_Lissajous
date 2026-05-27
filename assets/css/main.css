@@ -122,6 +122,7 @@ body {
 }
 
 .right-col p strong {
+    font-size: 14px;
     font-weight: 600;
     -webkit-hyphens: none; 
     -ms-hyphens: none;     
