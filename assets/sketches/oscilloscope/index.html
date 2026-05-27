@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <style>
+        body { margin: 0; padding: 10px; background: #ffffff; font-family: monospace; font-size: 11px; overflow: hidden; }
+        #canvas-box { width: 100%; border-bottom: 1px solid #000; padding-bottom: 10px; }
+        #control-panel { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding-top: 10px; }
+        .ctrl-item { display: flex; flex-direction: column; }
+        .ctrl-item label { font-weight: bold; margin-bottom: 4px; text-transform: uppercase; }
+        .ctrl-item input { width: 100%; border: 1px solid #000; background: #fff; height: 18px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="canvas-box"></div>
+    <div id="control-panel">
+        <div class="ctrl-item"><label>Freq X (a) [<span id="fx-l">1</span>]</label><input type="range" id="fx-s" min="1" max="10" step="1" value="1"></div>
+        <div class="ctrl-item"><label>Freq Y (b) [<span id="fy-l">1</span>]</label><input type="range" id="fy-s" min="1" max="10" step="1" value="1"></div>
+        <div class="ctrl-item"><label>Fase (&delta;) [<span id="p-l">0</span>&deg;]</label><input type="range" id="p-s" min="0" max="360" step="1" value="0"></div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>

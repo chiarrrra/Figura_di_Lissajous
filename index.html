@@ -1,207 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-	<meta charset="utf-8">
-	<title>Titolo Pagina</title>
-	<meta name="author"      content="Nome Cognome">
-	<meta name="description" content="Descrizione">
-	<meta name="viewport"    content="width=device-width, initial-scale=1">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet"   href="./assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lissajous_U</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/dist/tex-chtml.js"></script>
 </head>
 <body>
-	<main class="contenitore">
 
-		<!-- --------------------------------------------------------------------- -->
+    <div class="top-bar">
+        <div class="site-brand">
+            <a href="index.html">Lissajous_U</a>
+        </div>
+        <nav class="main-nav">
+            <a href="#fisica-suono" class="nav-item">Suono</a>
+            <a href="#figure-lissajous" class="nav-item">Lissajous</a>
+            <a href="#oscilloscopio" class="nav-item">Oscilloscopio</a>
+            <a href="#oscilloscope-music" class="nav-item">Music</a>
+        </nav>
+        <div class="font-buttons">
+            <span class="btn-aa"></span>
+            <span class="btn-aa2">2026</span>
+        </div>
+    </div>
+    
+    <div class="marquee-container">
+        <div class="marquee-content">
+            formule
+        </div>
+    </div>
 
-		<header>
-			<span></span>
-			<h1>Titolo</h1>
-		</header>
+    <div class="global-wrapper">
+        
+        <header class="giant-header">
+            <h1>Figura di Lissajous</h1>
+        </header>
 
-		<!-- --------------------------------------------------------------------- -->
+        <section id="fisica-suono" class="grid-section">
+            <div class="left-col">
+                <h4>Le Onde Sonore</h4>
+            </div>
+            <div class="right-col">
+                <p class="lead-text">Un'onda sonora è una perturbazione elastico-meccanica che nasce da una sorgente e si propaga nel tempo e nello spazio. Questo fenomeno trasporta energia attraverso un mezzo senza comportare uno spostamento della materia.</p>
+                <p class="lead-text">Un'onda sonora può essere tracciata su un grafico cartesiano posizionando il tempo sull'asse delle ascisse e lo spostamento delle particelle sull'asse delle ordinate.</p>
+                
+                <div class="math-display">
+                    $$y(t) = A \sin(\omega t + \phi)$$
+                </div>
+                <p class="lead-text">Le caratteristiche principali di un’onda sonora sono:</p>
+                <p class="lead-text"><strong>Periodo:</strong> Il tempo impiegato da una particella per compiere un'oscillazione completa e tornare al punto iniziale (distanza tra due creste successive).</p>
+                <p class="lead-text"><strong>Frequenza:</strong> Il numero di periodi compiuti in un secondo, misurato in Hertz (Hz).</p>
+                <p class="lead-text"><strong>Ampiezza:</strong> La distanza massima percorsa dalla particella dalla sua posizione di riposo. Da essa si calcolano la pressione e l'intensità acustica, misurate in decibel (dB).</p>
+                <p class="lead-text">
+                <div class="tool-window">
+                    <iframe src="assets/sketches/onde sonore/index.html" scrolling="no"></iframe>
+                </div>
+                
+                <h4 class="inner-sub">Tipologie di Onde</h4>
+                <p class="lead-text">Le onde si dividono in tre grandi categorie in base al loro andamento grafico:</p>
+                <p class="lead-text"><strong>Onde Sinusoidali:</strong> Perfettamente regolari e periodiche, in cui i picchi sono speculari alle valli. Rappresentano i toni puri.</p>
+                <p class="lead-text"><strong>Onde Periodiche Non Sinusoidali:</strong> Regolari e ripetitive, ma dalla forma complessa e ricca di anomalie.</p>
+                <p class="lead-text"><strong>Onde Aperiodiche:</strong> Caotiche e prive di regolarità.</p>
+            </div>
+        </section>
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 1: <br>Funzioni trigonometriche</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.<br>
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/funzioni_trigonometriche/"></iframe>
-			</div>
-		</section>
+        <section id="figure-lissajous" class="grid-section">
+            <div class="left-col">
+                <h4>Lissajous</h4>
+            </div>
+            <div class="right-col">
+                <p class="lead-text">Jules Antoine Lissajous (1822–1880) è stato un matematico e fisico francese. Inventò un apparato in grado di visualizzare otticamente le oscillazioni, un fascio di luce veniva riflesso in successione da due specchi fissati su altrettanti diapason vibranti, disposti perpendicolarmente l'uno rispetto all'altro. La proiezione risultante su una parete mostrava delle curve geometriche.</p>
+                
+                <div class="img-block">
+                    <img src="assets/img/lissajuice.jpg" alt="Sand paper">
+                </div>
 
+                <h4 class="inner-sub">Le figure di Lissajous</h4>
+                <p class="lead-text">Le figure di Lissajous sono traiettorie bidimensionali generate dall'incontro di due moti armonici ortogonali, descritti da funzioni sinusoidali sfalsate. Dal punto di vista matematico, queste composizioni geometriche sono rappresentate e definite proprio attraverso un sistema di due equazioni parametriche:</p>
 
-		<!-- --------------------------------------------------------------------- -->
+                <div class="math-display">
+                    $$\begin{cases} x(t) = A \sin(\omega_x t + \delta) \\ y(t) = B \sin(\omega_y t) \end{cases}$$
+                </div>
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 1: <br>Funzioni trigonometriche</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.<br>
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/funzioni_trigonometriche/"></iframe>
-			</div>
-		</section>
+                <p class="lead-text">I coefficienti determinano il numero di lobi e la struttura della figura.</p>
 
+                <div class="tool-window">
+                    <iframe src="assets/sketches/lissajous/index.html" scrolling="no"></iframe>
+                </div>
 
-		<!-- --------------------------------------------------------------------- -->
+                <p class="lead-text">L'aspetto finale della curva dipende strettamente da due fattori:</p>
+                <p class="lead-text"><strong>1. Rapporto delle frequenze:</strong> Se il rapporto è un numero razionale (frequenze commensurabili), la curva è chiusa e periodica. Se il rapporto è irrazionale, la curva non si chiude mai. Spesso queste forme ricordano nodi tridimensionali proiettati su un piano.</p>
+                <p class="lead-text"><strong>2. Differenza di fase:</strong> Con un rapporto di frequenze pari a 1:1, la figura varia in base alla fase iniziale: diventa una linea retta se i segnali sono in fase, un'ellisse per sfasamenti intermedi, o un cerchio perfetto se i segnali sono in quadratura (sfasati di 90° con uguale ampiezza). Con altri parametri si può generare persino una parabola.</p>
+            </div>
+        </section>
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 2:<br>I vettori</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/classe_vettori/"></iframe>
-			</div>
-		</section>
+        <section id="oscilloscopio" class="grid-section">
+            <div class="left-col">
+                <h4>Oscilloscopio</h4>
+            </div>
+            <div class="right-col">
+                <p class="lead-text">L'oscilloscopio è uno strumento di misura elettronico universale che visualizza l'andamento dei segnali elettrici. Nella sua modalità standard, mostra un grafico bidimensionale nel dominio del tempo, dove l'asse verticale (Y) indica la tensione e l'asse orizzontale (X) rappresenta il tempo.</p>
+                <p class="lead-text">I modelli analogici mostrano il segnale in tempo reale in modo fluido e continuo, i modelli digitali campionano la forma d'onda, la memorizzano e permettono di effettuare calcoli e letture dirette sui dati.</p>
 
-		<!-- --------------------------------------------------------------------- -->
+                <h4 class="inner-sub">Modalità X-Y</h4>
+                <p class="lead-text">Attivando la modalità X-Y, la base dei tempi interna dello strumento viene scollegata. In questo assetto: Il segnale applicato al Canale 1 (CH1) pilota lo spostamento orizzontale (asse X). Il segnale applicato al Canale 2 (CH2) pilota lo spostamento verticale (asse Y).</p>
+                <p class="lead-text">Il display si trasforma in un diagramma cartesiano vettoriale. Questa funzione è utilizzata per misurare con precisione rapporti di fase e frequenza tra due segnali.</p>
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 3:<br>Linea tratteggiata</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/linea_tratteggiata/"></iframe>
-			</div>
-		</section>
+                <div class="img-block">
+                    <img src="assets/img/oscilloscopi2.jpg" alt="Oscilloscope screen">
+                </div>
+            </div>
+        </section>
 
-		<!-- --------------------------------------------------------------------- -->
+        <section id="oscilloscope-music" class="grid-section">
+            <div class="left-col">
+                <h4>Oscilloscope Music</h4>
+            </div>
+            <div class="right-col">
+                <p class="lead-text">L'Oscilloscope Music è una forma d'arte audiovisiva in cui segnali audio stereo vengono inviati direttamente agli ingressi X e Y di un oscilloscopio per disegnare immagini complesse trattando il canale audio sinistro come l'asse orizzontale (X) e il canale destro come l'asse verticale (Y).</p>
+                <p class="lead-text">Quando i canali destro e sinistro riproducono forme d'onda, muovono il punto luminoso sullo schermo così velocemente che il cervello umano non percepisce un punto isolato, ma un'immagine vettoriale continua e definita.</p>
+                <p class="lead-text">I flussi sonori vengono mappati su precise equazioni parametriche, facendo in modo che ogni ciclo visivo corrisponda matematicamente a un determinato ritmo o timbro musicale.</p>
+            </div> </section>
 
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 4:<br>Spirograph</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/spirograph/"></iframe>
-
-			</div>
-		</section>
-
-<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
-			<h4 class="titolo-sezione">Sezione 5:<br> Radianti (GIF)</h4>
-			<div class="contenuto-sezione">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl.
-					In cursus aliquam odio eu eleifend.
-					Ut sed auctor magna.
-					In hac habitasse platea dictumst.
-					Aliquam aliquam nisl mi.
-					Phasellus et orci elit.
-					Maecenas vehicula elit et lacus accumsan consequat.
-					Nam consectetur lacus ante.
-					Vestibulum et massa dolor.
-					Aenean condimentum blandit eros non dapibus.
-					Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris.
-					Phasellus sit amet nulla eu tellus dictum cursus.
-					Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam.
-				</p>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif">
-			</div>
-		</section>
-
-<!-- --------------------------------------------------------------------- -->
-
-		<section class="filetto">
-			<h4 class="titolo-sezione">Bibliografia</h4>
-			<div class="contenuto-sezione">
-				<ul>
-					<li>
-						<a target="_blank" href="https://en.wikipedia.org/wiki/Trigonometric_functions">Wikipedia (en): Trigonometric functions</a>
-					</li>
-					<li>Maecenas quis ante sit amet neque cursus hendrerit ac sit amet nisl</li>
-					<li>In cursus aliquam odio eu eleifend</li>
-					<li>Ut sed auctor magna</li>
-					<li>In hac habitasse platea dictumst</li>
-					<li>Aliquam aliquam nisl mi</li>
-					<li>Phasellus et orci elit</li>
-					<li>Maecenas vehicula elit et lacus accumsan consequat</li>
-					<li>Nam consectetur lacus ante</li>
-					<li>Vestibulum et massa dolor</li>
-					<li>Aenean condimentum blandit eros non dapibus</li>
-					<li>Maecenas quam nulla, porta eu nibh in, cursus iaculis mauris</li>
-					<li>Phasellus sit amet nulla eu tellus dictum cursus</li>
-					<li>Sed aliquet, ipsum sit amet tempus semper, augue velit consequat mi, et gravida sem purus a quam</li>
-				</ul>
-
-			</div>
-		</section>
-	</main>
-</body>
+        <section class="grid-section bibliography">
+            <div class="left-col">
+                <h3>Bibliografia & Sitografia</h3>
+            </div>
+            <div class="right-col">
+                <p><a href="https://www.youtube.com/user/PreTone" target="_blank">Jerobeam Fenderson & Hansi Raber - Oscilloscope Music YouTube Channel</a></p>
+                <p><a href="https://teddavis.org/xyscope/" target="_blank">xyscope.js di Ted Davis</a></p>
+                <p><a href="http://www.albertonovello.com/" target="_blank">Jestern (Alberto Novello)</a></p>
+                <p><a href="#">Video Approfondimento Tecnica X-Y</a></p>
+                <p><a href="#">Video Dimostrazione Curve e Audio</a></p>
+                <p><a href="#">Tutorial e Scienza dietro l'Oscilloscope Music</a></p>
+            </div>
+        </section> </div> </body>
 </html>
