@@ -1,44 +1,37 @@
-/* ==========================================================================
-   CLONE INTERFACCIA EDITORIALE 
-   ========================================================================== */
-
-/* 1. IMPOSTAZIONE FONT UNIVERSALE */
 @font-face {
-    font-family: 'HalyardISIA';
-    src: url('../fonts/HalyardDis_ISIAU-Bk.otf') format('opentype'); /* Assicurati che il file sia in assets/fonts/ */
+    font-family: 'HalyardDisISIAU';
+    src: url('../fonts/HalyardDis_ISIAU-Bk.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-* {
+/* Reset and box-sizing */
+*, *::before, *::after {
     box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
-    font-family: 'HalyardISIA', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-}
-
-/* 2. SCORRIMENTO  */
-html {
-    scroll-behavior: smooth;
-}
-
-section {
-    scroll-margin-top: 110px; /* Ferma lo scroll 110px prima, lasciando visibile la linea del capitolo */
 }
 
 body {
     background-color: #ffffff;
     color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.5;
-    padding-top: 30px; /* Spazio aumentato per top-bar + marquee */
+    line-height: 1.35;
+    padding-top: 50px;
 }
 
 .global-wrapper {
     max-width: 960px;
-    margin: 0 auto;
+    margin: -60px auto; /* Sistemato il margine superiore per dare respiro al layout */
     padding: 0 20px;
 }
 
-/* TOP BAR  */
+/* TOP BAR */
 .top-bar {
     position: fixed;
     top: 0;
@@ -55,7 +48,7 @@ body {
 }
 
 .site-brand a {
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     color: #000000;
 }
@@ -86,85 +79,77 @@ body {
     padding: 2px 5px;
 }
 
-.marquee-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 20s linear infinite;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-@keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-
-/*TITOLO GIGANTE */
+/* TITOLO - RIPRISTINATO SENZA LINEA A TUTTO SCHERMO E CON PIÙ SPAZIO */
 .giant-header {
-    position: relative;
-    color: #000000;
-    margin: 80px 10;
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    padding: 30px 0 -0px 0; 
+    border-bottom: 1px solid #000000;
 }
 
 .giant-header h1 {
-    position: relative;
-    z-index: 2; /* Sta sopra all'animazione */
-    font-size: 220px; /* Occupa quasi tutto lo schermo orizzontalmente */
-    font-weight: regular;
-    letter-spacing: -0.03em;
+    font-size: 76px; 
+    font-weight: 400;
+    letter-spacing: -0.07em;
     line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    
-    
 }
 
-
-
-/*  GRIGLIA */
+/* GRIGLIA ASIMMETRICA - SPAZIATURA SOPRA E SOTTO LE LINEE DIVISORIE */
 .grid-section {
     display: grid;
     grid-template-columns: 240px 1fr;
-    padding: 200px 0;
+    /* 45px di spazio sotto la linea (sopra al testo) e 35px sopra la linea successiva */
+    padding: 45px 0 35px 0; 
     border-bottom: 1px solid #000000;
 }
 
 .left-col h4, .left-col h3 {
-    font-size: 25px;
-    font-weight: bold;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
     text-transform: none;
+    -webkit-hyphens: none; 
+    -ms-hyphens: none;     
+    hyphens: none;        
 }
 
 .right-col p {
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 5px; 
     max-width: 620px;
-    text-align: justify;
+    text-align: left; 
+    -webkit-hyphens: none; 
+    -ms-hyphens: none;     
+    hyphens: none; 
 }
 
 .right-col p strong {
-    font-weight: bold;
+    font-weight: 600;
+    -webkit-hyphens: none; 
+    -ms-hyphens: none;     
+    hyphens: none; 
 }
 
 .lead-text {
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 180;
+    -webkit-hyphens: none; 
+    -ms-hyphens: none;     
+    hyphens: none; 
 }
 
 .inner-sub {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 30px 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 10px 0; 
+    text-align: left;
+    -webkit-hyphens: none; 
+    -ms-hyphens: none;     
+    hyphens: none; 
 }
 
 /* BLOCCHI IMMAGINE */
 .img-block {
-    margin: 25px 0;
+    margin: 25px 0; 
     max-width: 620px;
 }
 
@@ -174,12 +159,17 @@ body {
     display: block;
 }
 
+/* Ingrandimento mirato per la prima immagine di Lissajous */
+#figure-lissajous .img-block {
+    max-width: 720px; 
+}
+
 .img-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin: 25px 0;
-    max-width: 620px;
+    resize: both;
 }
 
 .img-grid-2 img {
@@ -190,14 +180,14 @@ body {
 
 /* FORMULE MATEMATICHE */
 .math-display {
-    margin: 25px 0;
-    padding: 10px 0;
+    margin: 15px 0; 
+    padding: 5px 0;
     max-width: 620px;
 }
 
-/* CONTENITORE DELLO SKETCH (IFRAME) */
+/* SKETCH (IFRAME) */
 .tool-window {
-    margin: 35px 0 10px 0;
+    margin: 20px 0 10px 0; 
     max-width: 620px;
     border: 1px solid #000000;
 }
@@ -217,7 +207,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* FOOTER */
+/* FOOTER FINALE STILE DITHERU */
 .info-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -241,11 +231,12 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .giant-header h1 {
-        font-size: 14vw;
+        font-size: 44px;
     }
     .grid-section {
         grid-template-columns: 1fr;
         gap: 15px;
+        padding: 30px 0;
     }
     .info-footer {
         grid-template-columns: 1fr;
