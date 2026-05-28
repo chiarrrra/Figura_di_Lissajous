@@ -6,7 +6,6 @@
     font-display: swap;
 }
 
-/* Reset and box-sizing */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -31,7 +30,6 @@ body {
     padding: 0 20px;
 }
 
-/* TOP BAR */
 .top-bar {
     position: fixed;
     top: 0;
@@ -87,7 +85,7 @@ body {
 .giant-header h1 {
     font-size: 76px; 
     font-weight: 400;
-    letter-spacing: -0.07em;
+    letter-spacing: -0.05em;
     line-height: 1;
 }
 
