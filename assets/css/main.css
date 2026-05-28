@@ -79,7 +79,6 @@ body {
     padding: 2px 5px;
 }
 
-/* TITOLO - RIPRISTINATO SENZA LINEA A TUTTO SCHERMO E CON PIÙ SPAZIO */
 .giant-header {
     padding: 30px 0 -0px 0; 
     border-bottom: 1px solid #000000;
@@ -92,7 +91,6 @@ body {
     line-height: 1;
 }
 
-/* GRIGLIA ASIMMETRICA - SPAZIATURA SOPRA E SOTTO LE LINEE DIVISORIE */
 .grid-section {
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -148,7 +146,6 @@ body {
     hyphens: none; 
 }
 
-/* BLOCCHI IMMAGINE */
 .img-block {
     margin: 25px 0; 
     max-width: 620px;
@@ -160,7 +157,6 @@ body {
     display: block;
 }
 
-/* Ingrandimento mirato per la prima immagine di Lissajous */
 #figure-lissajous .img-block {
     max-width: 720px; 
 }
@@ -179,14 +175,12 @@ body {
     display: block;
 }
 
-/* FORMULE MATEMATICHE */
 .math-display {
     margin: 15px 0; 
     padding: 5px 0;
     max-width: 620px;
 }
 
-/* SKETCH (IFRAME) */
 .tool-window {
     margin: 20px 0 10px 0; 
     max-width: 620px;
@@ -200,7 +194,6 @@ body {
     display: block;
 }
 
-/* SITOGRAFIA / BIBLIOGRAFIA */
 .bibliography .right-col a {
     color: #000000;
     text-decoration: underline;
@@ -208,7 +201,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* FOOTER FINALE STILE DITHERU */
 .info-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -229,7 +221,6 @@ body {
     line-height: 1.4;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .giant-header h1 {
         font-size: 44px;

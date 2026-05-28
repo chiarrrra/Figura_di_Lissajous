@@ -13,7 +13,6 @@ function draw() {
     background(255);
     fxL.html(fxS.value()); fyL.html(fyS.value()); pL.html(pS.value());
     
-    // Griglia speculare al tool Onde Sonore
     strokeWeight(1);
     stroke(240);
     for(let i=0; i<width; i+=20) line(i, 0, i, height);
@@ -36,7 +35,6 @@ function draw() {
     push();
     translate(width/2, height/2);
     
-    // Disegna la curva tracciata (stile speculare)
     noFill(); 
     stroke(0); 
     strokeWeight(1.5);
